@@ -1,0 +1,147 @@
+body {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+      margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 100%;
+    margin: 20px;
+    background-color: #dfd9d9;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+}
+
+.challan-info label {
+    font-weight: bold;
+}
+
+.challan-info input {
+    width: calc(70% - 0px); /* Adjusted width to accommodate padding */
+    padding: 8px;
+    margin: 5px 0; /* Added margin */
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.date-input {
+    width: calc(9% - 0px); /* Adjusted width to accommodate padding */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 8px;
+    margin: 5px 0; /* Added margin */
+}
+
+.particulars-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Added margin */
+}
+
+.particulars-table th, .particulars-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+.particulars-table th {
+    background-color: #f2f2f2;
+}
+
+.particulars-table input {
+    width: calc(100% - 20px); /* Adjusted width to accommodate padding */
+    padding: 8px;
+    margin: 5px 0; /* Added margin */
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.particulars-table input:first-child {
+    margin-top: 10px; /* Added extra margin for the first input */
+}
+
+.date-label {
+    position: absolute;
+    top: 34px;
+    right: 170px;
+    font-weight: bold;
+}
+
+.addrow {
+    position: absolute;
+    background-color: #dfd9d9;
+    right: 49%;
+    border: none;
+    font-size: 35px;
+}
+
+#from {
+    margin-left: 6px;
+}
+
+#challan-no {
+    margin-left: 41px;
+}
+
+#to {
+    margin-left: 27px;
+
+}
+
+.print-box{
+    position: absolute;
+}
+
+.print-box img {
+    width: 50px;
+    height: auto;
+}
+ @media print {
+        .addrow {
+            display: none;
+        }
+        .print-box {
+            display: none;
+        }
+        .date-label,
+        .date-input {
+            display: block;
+        }
+    }
+
+    /* Responsive layout for smaller screens */
+    @media (max-width: 768px) {
+        .container {
+            margin: 10px;
+            padding: 10px;
+        }
+        .date-label {
+            top: 10px;
+            right: 88px;
+        }
+        .date-input {
+            width: auto;
+            top: 2px;
+            right: 5px;
+        }
+        .addrow {
+            font-size: 25px;
+            right: 45%;
+        }
+    }
